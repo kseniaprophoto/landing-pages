@@ -757,55 +757,27 @@
       Fill out the form below and Ksenia will be in touch within 24 hours to confirm your date and answer any questions.
     </p>
 
-    <form id="booking-form" class="space-y-5" onsubmit="handleSubmit(event)">
-      <div class="grid sm:grid-cols-2 gap-5">
-        <div>
-          <label class="font-mono text-xs tracking-widest text-white/40 uppercase block mb-2">Your Name *</label>
-          <input type="text" name="name" required placeholder="First &amp; Last Name"
-            class="w-full bg-white/5 border border-white/10 text-white placeholder-white/20 px-4 py-3 font-light focus:outline-none focus:border-gold transition-colors" />
-        </div>
-        <div>
-          <label class="font-mono text-xs tracking-widest text-white/40 uppercase block mb-2">Phone Number *</label>
-          <input type="tel" name="phone" required placeholder="(202) 555-0100"
-            class="w-full bg-white/5 border border-white/10 text-white placeholder-white/20 px-4 py-3 font-light focus:outline-none focus:border-gold transition-colors" />
-        </div>
-      </div>
-      <div>
-        <label class="font-mono text-xs tracking-widest text-white/40 uppercase block mb-2">Email Address *</label>
-        <input type="email" name="email" required placeholder="you@example.com"
-          class="w-full bg-white/5 border border-white/10 text-white placeholder-white/20 px-4 py-3 font-light focus:outline-none focus:border-gold transition-colors" />
-      </div>
-      <div>
-        <label class="font-mono text-xs tracking-widest text-white/40 uppercase block mb-2">Session Type *</label>
-        <select name="session" required
-          class="w-full bg-white/5 border border-white/10 text-white px-4 py-3 font-light focus:outline-none focus:border-gold transition-colors appearance-none">
-          <option value="" disabled selected class="bg-ink text-white/40">Select a session</option>
-          <option value="maternity" class="bg-ink">Maternity Session</option>
-          <option value="bundle" class="bg-ink">Maternity + Newborn Bundle — Save $200</option>
-          <option value="unsure" class="bg-ink">Not sure yet — let's talk</option>
-        </select>
-      </div>
-      <div>
-        <label class="font-mono text-xs tracking-widest text-white/40 uppercase block mb-2">How many weeks along are you?</label>
-        <input type="text" name="weeks" placeholder="e.g. 22 weeks"
-          class="w-full bg-white/5 border border-white/10 text-white placeholder-white/20 px-4 py-3 font-light focus:outline-none focus:border-gold transition-colors" />
-      </div>
-      <div>
-        <label class="font-mono text-xs tracking-widest text-white/40 uppercase block mb-2">Anything else you'd like us to know?</label>
-        <textarea name="message" rows="4" placeholder="Due date, preferred dates, questions..."
-          class="w-full bg-white/5 border border-white/10 text-white placeholder-white/20 px-4 py-3 font-light focus:outline-none focus:border-gold transition-colors resize-none"></textarea>
-      </div>
-      <button type="submit"
-        class="w-full bg-gold text-ink font-mono text-xs tracking-widest py-5 hover:bg-gold-light transition-colors uppercase">
-        Send My Booking Request →
-      </button>
-      <p id="form-success" class="text-gold text-center font-light hidden">
-        ✦ Thank you! Ksenia will be in touch within 24 hours.
-      </p>
-      <p id="form-error" class="text-red-400 text-center font-light text-sm hidden">
-        Please fill in all required fields.
-      </p>
-    </form>
+    <!-- LeadSavage Embedded Form -->
+    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 0; overflow: hidden; min-height: 500px;">
+      <iframe
+        src="https://link.leadsavage.io/widget/form/zCR4TziJ92oEVTG8CwE9"
+        style="width:100%;height:100%;border:none;border-radius:4px;min-height:500px;"
+        id="inline-zCR4TziJ92oEVTG8CwE9"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Maternity Contact Form (Google Ads)"
+        data-height="undefined"
+        data-layout-iframe-id="inline-zCR4TziJ92oEVTG8CwE9"
+        data-form-id="zCR4TziJ92oEVTG8CwE9"
+        title="Maternity Contact Form (Google Ads)"
+      ></iframe>
+    </div>
+    <script src="https://link.leadsavage.io/js/form_embed.js"></script>
 
     <div class="mt-12 pt-8 border-t border-white/10 text-center">
       <p class="text-white/30 font-mono text-xs tracking-widest uppercase mb-3">Questions? We respond within 24 hours.</p>
@@ -918,25 +890,6 @@
     window.addEventListener('touchmove', e => { if (active) move(e.touches[0].clientX); }, { passive: true });
   }
   initReveal('rv1');
-
-  // ── Form handler ──────────────────────────────────────────
-  function handleSubmit(e) {
-    e.preventDefault();
-    const form    = document.getElementById('booking-form');
-    const success = document.getElementById('form-success');
-    const error   = document.getElementById('form-error');
-    const data    = new FormData(form);
-    if (!data.get('name') || !data.get('email') || !data.get('phone') || !data.get('session')) {
-      error.classList.remove('hidden');
-      return;
-    }
-    error.classList.add('hidden');
-    // TODO: replace with your actual form endpoint (Formspree, Netlify Forms, HoneyBook, etc.)
-    // fetch('/api/contact', { method: 'POST', body: JSON.stringify(Object.fromEntries(data)) })
-    success.classList.remove('hidden');
-    form.querySelectorAll('input, select, textarea').forEach(el => el.value = '');
-    setTimeout(() => success.classList.add('hidden'), 6000);
-  }
 </script>
 
 </body>
