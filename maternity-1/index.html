@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxury Maternity Photographer Washington DC | Ksenia Pro</title>
+  <meta name="description" content="Studio maternity photographer serving Washington DC, Maryland & Virginia. Luxury editorial maternity photography with designer gown wardrobe. Book your session today." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:     '#0A0A0A',
+            cream:   '#F5F0E8',
+            gold:    '#C9A97A',
+            'gold-light': '#E8D5B0',
+            'dark-brown': '#1A1210',
+            muted:   '#7A6E62',
+            border:  '#E0D8CC',
+          },
+          fontFamily: {
+            serif:  ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans:   ['Inter', 'system-ui', 'sans-serif'],
+            mono:   ['IBM Plex Mono', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+.portfolio-item { overflow: hidden; }
+    .portfolio-item img { transition: transform 0.4s ease; }
+    .portfolio-item:hover img { transform: scale(1.03); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .faq-answer.open { max-height: 400px; }
+    .faq-icon { transition: transform 0.3s ease; }
+    .faq-icon.open { transform: rotate(45deg); }
+    /* Before/After reveal slider */
+    .reveal-wrap { position: relative; overflow: hidden; width: 100%; cursor: ew-resize; user-select: none; touch-action: pan-y; }
+    .reveal-base { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
+    .reveal-top  { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; clip-path: inset(0 50% 0 0); transition: clip-path 0s; }
+    .reveal-line { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: rgba(255,255,255,0.9); transform: translateX(-50%); z-index: 10; pointer-events: none; }
+    .reveal-btn  {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 44px; height: 44px;
+      background: white; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; color: #0A0A0A;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+      z-index: 11; pointer-events: none;
+    }
+    .reveal-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 44px; transform: translateX(-50%); z-index: 12; cursor: ew-resize; }
+    .reveal-label { position: absolute; bottom: 1rem; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.15em; color: rgba(255,255,255,0.7); background: rgba(10,10,10,0.5); padding: 3px 8px; pointer-events: none; z-index: 13; }
+    .reveal-label-l { left: 1rem; }
+    .reveal-label-r { right: 1rem; }
+    .header-scrolled { background: rgba(10,10,10,0.92) !important; backdrop-filter: blur(12px); }
+    /* Hero image: face is on the LEFT side of the landscape image */
+    .hero-photo { object-position: 50% center; }
+    @media (max-width: 640px) { .hero-photo { object-position: center 15%; } }
+  </style>
+</head>
+<body class="bg-cream text-ink font-sans antialiased">
+
+<!-- ═══════════════════════════════════════════════════════════
+     1. STICKY HEADER
+═══════════════════════════════════════════════════════════ -->
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3 px-4 md:py-4 md:px-12 flex items-center justify-between" style="background: rgba(10,10,10,0.45); backdrop-filter: blur(8px);">
+  <a href="#" class="font-serif font-light text-white" style="font-size: clamp(0.7rem, 3.5vw, 1.25rem); letter-spacing: 0.12em;">
+    KSENIA <span class="text-gold">PRO</span> PHOTOGRAPHY
+  </a>
+  <nav class="hidden md:flex items-center gap-8 text-sm font-mono text-white/70 tracking-wider">
+    <a href="#portfolio" class="hover:text-gold transition-colors">PORTFOLIO</a>
+    <a href="#about" class="hover:text-gold transition-colors">ABOUT</a>
+    <a href="#included" class="hover:text-gold transition-colors">SESSIONS</a>
+    <a href="#faq" class="hover:text-gold transition-colors">FAQ</a>
+  </nav>
+  <!-- Full label on desktop, short on mobile -->
+  <a href="#book" class="bg-gold text-ink font-mono tracking-widest hover:bg-gold-light transition-colors uppercase text-center text-xs px-3 py-2 md:px-5 md:py-3">
+    <span class="sm:hidden">Book</span>
+    <span class="hidden sm:inline">Book Your Session</span>
+  </a>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════
+     2. HERO
+═══════════════════════════════════════════════════════════ -->
+<section class="relative min-h-screen flex items-end bg-dark-brown overflow-hidden">
+  <!-- Hero image: portrait on mobile, landscape on desktop -->
+  <picture class="absolute inset-0 w-full h-full">
+    <source media="(max-width: 640px)" srcset="./images/feature-1.jpg" />
+    <img
+      src="./images/hero.jpg"
+      alt="Luxury maternity photographer Washington DC — Ksenia Pro Photography"
+      class="absolute inset-0 w-full h-full object-cover hero-photo"
+      loading="eager"
+    />
+  </picture>
+  <!-- Top gradient — header & tags readability -->
+  <div class="absolute inset-0 bg-gradient-to-b from-ink/70 via-transparent to-transparent"></div>
+  <!-- Bottom gradient — CTA text readability -->
+  <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent"></div>
+  <!-- Right-side gradient on desktop — text area -->
+  <div class="absolute inset-0 hidden md:block bg-gradient-to-l from-ink/55 via-ink/10 to-transparent"></div>
+
+  <!-- Style tags — left side, hidden on mobile -->
+  <div class="absolute top-28 left-8 md:left-16 flex-col gap-3 z-10 hidden sm:flex">
+    <span class="font-mono text-xs tracking-widest text-gold border border-gold/50 bg-ink/50 backdrop-blur-sm px-3 py-1">EDITORIAL</span>
+    <span class="font-mono text-xs tracking-widest text-gold border border-gold/50 bg-ink/50 backdrop-blur-sm px-3 py-1">MAGAZINE</span>
+    <span class="font-mono text-xs tracking-widest text-gold border border-gold/50 bg-ink/50 backdrop-blur-sm px-3 py-1">FASHION</span>
+  </div>
+
+  <!-- Text block — centered on mobile, right-aligned on desktop -->
+  <div class="relative z-10 w-full px-5 md:px-16 pb-10 md:pb-24 flex justify-center md:justify-end">
+    <div class="max-w-lg text-center md:text-right">
+      <p class="font-mono text-gold text-xs tracking-[0.25em] uppercase mb-3 md:mb-5">Washington DC · Maryland · Virginia</p>
+      <h1 class="font-serif font-light text-white leading-tight mb-4 md:mb-5" style="font-size: clamp(2rem, 8vw, 5.5rem);">
+        Luxury Studio<br/>
+        <em class="text-gold-light">Maternity</em><br/>
+        Photography
+      </h1>
+      <!-- Subheading — hidden on small phones, shown from sm up -->
+      <p class="hidden sm:block text-white/80 font-light text-base md:text-xl mb-4 leading-relaxed">
+        Editorial. Fashion-forward. Unapologetically beautiful.<br class="hidden md:block"/>
+        Your maternity session, styled like a Vogue cover.
+      </p>
+      <!-- Urgency — hidden on mobile -->
+      <p class="hidden sm:block font-mono text-gold/80 text-xs tracking-widest mb-6 md:mb-8 uppercase">
+        ✦ Limited sessions available this month — book now to secure your date
+      </p>
+      <div class="flex flex-row sm:flex-row gap-3 mb-6 md:mb-10 justify-center md:justify-end">
+        <a href="#book" class="bg-gold text-ink font-mono text-xs tracking-widest px-5 py-3 md:px-8 md:py-4 hover:bg-gold-light transition-colors uppercase text-center">
+          Book Now
+        </a>
+        <a href="#portfolio" class="border border-white/40 text-white font-mono text-xs tracking-widest px-5 py-3 md:px-8 md:py-4 hover:border-gold hover:text-gold transition-colors uppercase text-center">
+          View Portfolio
+        </a>
+      </div>
+      <!-- Trust strip — 2 lines on mobile, 1 on desktop -->
+      <div class="flex flex-wrap gap-x-4 gap-y-1 text-white/40 font-mono text-xs tracking-wider justify-center md:justify-end">
+        <span>⭐⭐⭐⭐⭐ 160+ Google Reviews</span>
+        <span class="hidden sm:inline">·</span>
+        <span>1,000+ Sessions</span>
+        <span class="hidden sm:inline">·</span>
+        <span class="hidden sm:inline">15 Years Experience</span>
+        <span class="hidden sm:inline">·</span>
+        <span>DC · MD · VA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     3. PORTFOLIO GRID
+═══════════════════════════════════════════════════════════ -->
+<section id="portfolio" class="bg-cream py-20 md:py-28 px-6 md:px-12">
+  <div class="max-w-7xl mx-auto">
+    <p class="font-mono text-gold text-xs tracking-[0.3em] uppercase mb-4">The Work</p>
+    <h2 class="font-serif font-light text-4xl md:text-5xl text-ink mb-4">
+      Every Frame, a <em>Magazine Cover</em>
+    </h2>
+    <p class="text-muted font-light text-lg max-w-2xl mb-14">
+      Studio maternity photography in Washington DC and across the DMV — styled, directed, and delivered with the precision of a fashion shoot.
+    </p>
+
+    <!-- Grid: 2 col mobile / 3 tablet / 4 desktop — 20 images total -->
+    <div class="grid grid-cols-3 gap-0.5">
+      <div class="portfolio-item aspect-square bg-dark-brown/20 overflow-hidden">
+        <img src="./images/portfolio-1.jpg" alt="Luxury maternity photographer Washington DC — couple studio portrait" class="w-full h-full object-cover" style="object-position: center 40%" loading="lazy" />
+      </div>
+      <div class="portfolio-item aspect-square bg-dark-brown/20 overflow-hidden">
+        <img src="./images/portfolio-2.jpg" alt="Editorial maternity photography DC — gown session" class="w-full h-full object-cover" style="object-position: center 15%" loading="lazy" />
+      </div>
+      <div class="portfolio-item aspect-square bg-dark-brown/20 overflow-hidden">
+        <img src="./images/portfolio-3.jpg" alt="Studio maternity photoshoot Maryland — dark silhouette" class="w-full h-full object-cover" style="object-position: center 25%" loading="lazy" />
+      </div>
+      <div class="portfolio-item aspect-square bg-dark-brown/20 overflow-hidden">
+        <img src="./images/portfolio-4.jpg" alt="Maternity photographer Bethesda MD — mommy and me" class="w-full h-full object-cover" style="object-position: center 48%" loading="lazy" />
+      </div>
+      <div class="portfolio-item aspect-square bg-dark-brown/20 overflow-hidden">
+        <img src="./images/portfolio-5.jpg" alt="Luxury maternity photoshoot Washington DC — family portrait" class="w-full h-full object-cover" style="object-position: center 25%" loading="lazy" />
+      </div>
+      <div class="portfolio-item aspect-square bg-dark-brown/20 overflow-hidden">
+        <img src="./images/portfolio-6.jpg" alt="Fashion maternity photographer DC — blue ruffled gown" class="w-full h-full object-cover" style="object-position: center 30%" loading="lazy" />
+      </div>
+      <div class="portfolio-item aspect-square bg-dark-brown/20 overflow-hidden">
+        <img src="./images/portfolio-7.jpg" alt="Luxury maternity photographer Bethesda MD — gold gown" class="w-full h-full object-cover" style="object-position: center 20%" loading="lazy" />
+      </div>
+      <div class="portfolio-item aspect-square bg-dark-brown/20 overflow-hidden">
+        <img src="./images/portfolio-8.jpg" alt="Studio maternity photography Northern Virginia — aerial silk" class="w-full h-full object-cover" style="object-position: center 40%" loading="lazy" />
+      </div>
+      <div class="portfolio-item aspect-square bg-dark-brown/20 overflow-hidden">
+        <img src="./images/portfolio-9.jpg" alt="Maternity photographer McLean VA — couple white fabric" class="w-full h-full object-cover" style="object-position: center 33%" loading="lazy" />
+      </div>
+      <div class="portfolio-item aspect-square bg-dark-brown/20 overflow-hidden">
+        <img src="./images/portfolio-10.jpg" alt="Editorial maternity photography Washington DC — cherry blossoms" class="w-full h-full object-cover" style="object-position: center 30%" loading="lazy" />
+      </div>
+      <div class="portfolio-item aspect-square bg-dark-brown/20 overflow-hidden">
+        <img src="./images/portfolio-11.jpg" alt="Fine art maternity photographer DC — intimate close-up" class="w-full h-full object-cover" style="object-position: center 30%" loading="lazy" />
+      </div>
+      <div class="portfolio-item aspect-square bg-dark-brown/20 overflow-hidden">
+        <img src="./images/portfolio-12.jpg" alt="Studio maternity photographer Rockville MD — moody portrait" class="w-full h-full object-cover" style="object-position: center 58%" loading="lazy" />
+      </div>
+      <div class="portfolio-item aspect-square bg-dark-brown/20 overflow-hidden">
+        <img src="./images/portfolio-13.jpg" alt="Maternity photographer Washington DC — red flying fabric gown" class="w-full h-full object-cover" style="object-position: center 15%" loading="lazy" />
+      </div>
+      <div class="portfolio-item aspect-square bg-dark-brown/20 overflow-hidden">
+        <img src="./images/portfolio-14.jpg" alt="Maternity photographer Maryland — mom and baby" class="w-full h-full object-cover" style="object-position: center 20%" loading="lazy" />
+      </div>
+      <div class="portfolio-item aspect-square bg-dark-brown/20 overflow-hidden">
+        <img src="./images/portfolio-15.jpg" alt="Studio maternity photoshoot Virginia — family casual" class="w-full h-full object-cover" style="object-position: center 20%" loading="lazy" />
+      </div>
+      <div class="portfolio-item aspect-square bg-dark-brown/20 overflow-hidden">
+        <img src="./images/portfolio-16.jpg" alt="Fashion maternity photographer Silver Spring MD — hat silhouette" class="w-full h-full object-cover" style="object-position: center 20%" loading="lazy" />
+      </div>
+      <div class="portfolio-item aspect-square bg-dark-brown/20 overflow-hidden">
+        <img src="./images/portfolio-17.jpg" alt="Luxury maternity photographer Potomac MD — white pleated gown" class="w-full h-full object-cover" style="object-position: center 15%" loading="lazy" />
+      </div>
+      <div class="portfolio-item aspect-square bg-dark-brown/20 overflow-hidden">
+        <img src="./images/portfolio-18.jpg" alt="Maternity photographer Arlington VA — couple silhouette" class="w-full h-full object-cover" style="object-position: center 30%" loading="lazy" />
+      </div>
+      <div class="portfolio-item aspect-square bg-dark-brown/20 overflow-hidden">
+        <img src="./images/portfolio-19.jpg" alt="Luxury maternity photography Tysons VA — couple editorial" class="w-full h-full object-cover" style="object-position: center 25%" loading="lazy" />
+      </div>
+      <div class="portfolio-item aspect-square bg-dark-brown/20 overflow-hidden">
+        <img src="./images/portfolio-20.jpg" alt="Maternity photographer Fairfax VA — family embrace" class="w-full h-full object-cover" style="object-position: center 20%" loading="lazy" />
+      </div>
+      <div class="portfolio-item aspect-square bg-dark-brown/20 overflow-hidden">
+        <img src="./images/portfolio-31.jpg" alt="Studio maternity photography Washington DC — angel wings" class="w-full h-full object-cover" style="object-position: center 20%" loading="lazy" />
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="#book" class="font-mono text-xs tracking-widest text-muted border border-border px-8 py-4 hover:border-gold hover:text-gold transition-colors uppercase inline-block">
+        Book Your Session →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     4. FEATURE CARDS
+═══════════════════════════════════════════════════════════ -->
+<section class="bg-ink py-20 md:py-28 px-6 md:px-12">
+  <div class="max-w-6xl mx-auto">
+    <p class="font-mono text-gold text-xs tracking-[0.3em] uppercase mb-4 text-center">The Difference</p>
+    <h2 class="font-serif font-light text-4xl md:text-5xl text-white text-center mb-16">
+      This Is Not a Regular<br/><em class="text-gold-light">Photo Session</em>
+    </h2>
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="border border-white/10 p-8 hover:border-gold/40 transition-colors group">
+        <div class="font-mono text-gold text-xs tracking-widest mb-6 uppercase">01 / Wardrobe</div>
+        <h3 class="font-serif font-light text-2xl text-white mb-4 group-hover:text-gold-light transition-colors">
+          Designer Gown Wardrobe — Included
+        </h3>
+        <p class="text-white/50 font-light leading-relaxed">
+          Access to a curated collection of luxury designer gowns, flowing fabrics, and styled accessories. No scrambling for outfits — we have everything you need to look like you stepped off a runway.
+        </p>
+      </div>
+
+      <div class="border border-white/10 p-8 hover:border-gold/40 transition-colors group">
+        <div class="font-mono text-gold text-xs tracking-widest mb-6 uppercase">02 / Direction</div>
+        <h3 class="font-serif font-light text-2xl text-white mb-4 group-hover:text-gold-light transition-colors">
+          Full Posing Direction. Zero Guesswork.
+        </h3>
+        <p class="text-white/50 font-light leading-relaxed">
+          You don't need to know how to pose. Ksenia directs every angle, expression, and movement so you look effortless and stunning — even if you've never been in front of a camera before.
+        </p>
+      </div>
+
+      <div class="border border-white/10 p-8 hover:border-gold/40 transition-colors group">
+        <div class="font-mono text-gold text-xs tracking-widest mb-6 uppercase">03 / Editing</div>
+        <h3 class="font-serif font-light text-2xl text-white mb-4 group-hover:text-gold-light transition-colors">
+          Magazine-Grade Retouching
+        </h3>
+        <p class="text-white/50 font-light leading-relaxed">
+          Hand-edited with a fashion editorial eye. Every image is retouched to look polished, luminous, and print-worthy — the kind of photos that stop people mid-scroll and make them ask "who is your photographer?"
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     5. BEFORE / AFTER SLIDER
+═══════════════════════════════════════════════════════════ -->
+<section class="bg-dark-brown py-20 md:py-28 px-6 md:px-12">
+  <div class="max-w-5xl mx-auto">
+    <p class="font-mono text-gold text-xs tracking-[0.3em] uppercase mb-4 text-center">The Edit</p>
+    <h2 class="font-serif font-light text-4xl md:text-5xl text-white text-center mb-4">
+      The Transformation Is <em class="text-gold-light">Real</em>
+    </h2>
+    <p class="text-white/50 text-center font-light max-w-xl mx-auto mb-14">
+      Our editorial retouching process removes distractions, enhances the light, and brings out the natural radiance of pregnancy — without making you look like someone else.
+    </p>
+
+    <!-- Reveal slider: drag handle left/right to reveal BEFORE under AFTER -->
+    <div class="reveal-wrap rounded mb-6" id="rv1" style="aspect-ratio: 5/4; width: 100%;">
+      <!-- AFTER — base, always visible underneath -->
+      <img src="./images/after-1.jpg" alt="After — professionally retouched by Ksenia Pro" class="reveal-base" loading="lazy" />
+      <!-- BEFORE — clipped overlay, revealed as you drag left -->
+      <img src="./images/before-1.jpg" alt="Before — original photo" class="reveal-top" id="rv1-top" loading="lazy" />
+      <!-- Drag handle -->
+      <div class="reveal-handle" id="rv1-handle">
+        <div class="reveal-line"></div>
+        <div class="reveal-btn">◀▶</div>
+      </div>
+      <!-- Labels -->
+      <span class="reveal-label reveal-label-l">BEFORE</span>
+      <span class="reveal-label reveal-label-r">AFTER</span>
+    </div>
+    <p class="text-center font-mono text-white/30 text-xs tracking-widest">← drag to compare →</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     6. BENEFITS (dark)
+═══════════════════════════════════════════════════════════ -->
+<section class="bg-ink py-20 md:py-28 px-6 md:px-12">
+  <div class="max-w-5xl mx-auto">
+    <p class="font-mono text-gold text-xs tracking-[0.3em] uppercase mb-4">Why Ksenia Pro</p>
+    <h2 class="font-serif font-light text-4xl md:text-5xl text-white mb-16">
+      Why Expecting Moms Across DC, MD &amp; VA<br/>
+      Choose <em class="text-gold-light">Ksenia Pro</em>
+    </h2>
+    <div class="grid md:grid-cols-2 gap-6 mb-14">
+      <div class="flex gap-5">
+        <span class="text-gold text-xl mt-0.5 flex-shrink-0">✦</span>
+        <div>
+          <h4 class="text-white font-medium mb-2">Luxury Studio. Zero Hassle.</h4>
+          <p class="text-white/40 font-light leading-relaxed">Professional studio in Gaithersburg, MD — off I-270, easy from DC, Bethesda, McLean, Rockville, and Northern Virginia. You show up. We handle everything else.</p>
+        </div>
+      </div>
+      <div class="flex gap-5">
+        <span class="text-gold text-xl mt-0.5 flex-shrink-0">✦</span>
+        <div>
+          <h4 class="text-white font-medium mb-2">Designer Wardrobe Provided</h4>
+          <p class="text-white/40 font-light leading-relaxed">Access to a full collection of luxury gowns, flowing fabrics, and styled accessories — all included in your session. No shopping required.</p>
+        </div>
+      </div>
+      <div class="flex gap-5">
+        <span class="text-gold text-xl mt-0.5 flex-shrink-0">✦</span>
+        <div>
+          <h4 class="text-white font-medium mb-2">Editorial Style. Fashion-Forward Results.</h4>
+          <p class="text-white/40 font-light leading-relaxed">Ksenia shoots with a magazine eye — every session is directed and lit to produce images that look like fine art, not candid snapshots.</p>
+        </div>
+      </div>
+      <div class="flex gap-5">
+        <span class="text-gold text-xl mt-0.5 flex-shrink-0">✦</span>
+        <div>
+          <h4 class="text-white font-medium mb-2">A Photographer Who's Also a Mom</h4>
+          <p class="text-white/40 font-light leading-relaxed">Ksenia understands pregnancy from the inside. She knows how to make you feel beautiful, confident, and completely at ease — even when you're 34 weeks along.</p>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-4">
+      <a href="#book" class="bg-gold text-ink font-mono text-xs tracking-widest px-8 py-4 hover:bg-gold-light transition-colors uppercase text-center">
+        Book Your Maternity Session
+      </a>
+      <a href="#included" class="border border-white/20 text-white font-mono text-xs tracking-widest px-8 py-4 hover:border-gold hover:text-gold transition-colors uppercase text-center">
+        See What's Included
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     6B. FULL-WIDTH FEATURE IMAGES (Magazine spreads)
+═══════════════════════════════════════════════════════════ -->
+<section class="bg-ink">
+
+  <!-- Feature 1: Full bleed single image with side text -->
+  <div class="grid md:grid-cols-2 min-h-[70vh]">
+    <div class="relative overflow-hidden min-h-[50vw] md:min-h-0 bg-[#1A1210]">
+      <img src="./images/feature-1.jpg" alt="Luxury studio maternity photographer Washington DC — editorial fashion session"
+        class="absolute inset-0 w-full h-full object-cover"
+        style="object-position: center 20%"
+        loading="lazy" />
+    </div>
+    <div class="flex flex-col justify-center px-10 md:px-16 py-16 bg-dark-brown">
+      <p class="font-mono text-gold text-xs tracking-[0.3em] uppercase mb-6">Featured Session</p>
+      <h3 class="font-serif font-light text-3xl md:text-4xl text-white mb-6 leading-snug">
+        Styled Like a<br/><em class="text-gold-light">Fashion Editorial</em>
+      </h3>
+      <p class="text-white/50 font-light leading-relaxed mb-8">
+        Every maternity session at Ksenia Pro is treated like a magazine shoot — multiple designer gowns, dramatic lighting setups, and a photographer who directs every single moment so you look and feel extraordinary.
+      </p>
+      <a href="#book" class="font-mono text-xs tracking-widest text-gold border border-gold/40 px-6 py-3 hover:bg-gold hover:text-ink hover:border-gold transition-colors uppercase self-start">
+        Book This Experience
+      </a>
+    </div>
+  </div>
+
+  <!-- Feature 2: Full-width panoramic — flying fabric -->
+  <div class="relative overflow-hidden bg-[#2A1F14]" style="height: 65vh; min-height: 400px;">
+    <img src="./images/feature-2.jpg" alt="Editorial maternity photography DC — flying fabric gown session"
+      class="absolute inset-0 w-full h-full object-cover"
+      style="object-position: center 35%"
+      loading="lazy" />
+    <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent"></div>
+    <div class="absolute inset-0 flex flex-col items-center justify-end pb-14 px-6 text-center">
+      <p class="font-mono text-gold text-xs tracking-[0.3em] uppercase mb-3">The Flying Fabric Session</p>
+      <h3 class="font-serif font-light text-3xl md:text-5xl text-white max-w-2xl leading-tight">
+        Drama. Movement. <em class="text-gold-light">Unforgettable.</em>
+      </h3>
+    </div>
+  </div>
+
+  <!-- Feature 3: Two side-by-side tall images -->
+  <div class="grid grid-cols-2 gap-1">
+    <div class="relative overflow-hidden bg-[#1A1210]" style="height: 60vh; min-height: 300px;">
+      <img src="./images/feature-3.jpg" alt="Maternity gown photoshoot Washington DC studio"
+        class="absolute inset-0 w-full h-full object-cover"
+        style="object-position: center 18%"
+        loading="lazy" />
+      <div class="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent"></div>
+      <div class="absolute bottom-6 left-0 right-0 px-6 text-center">
+        <p class="font-mono text-gold text-xs tracking-[0.25em] uppercase mb-1">Studio Wardrobe</p>
+        <p class="font-serif font-light text-white text-xl md:text-2xl leading-tight">Designer Gown Collection</p>
+      </div>
+    </div>
+    <div class="relative overflow-hidden bg-[#0A0A0A]" style="height: 60vh; min-height: 300px;">
+      <img src="./images/feature-4.jpg" alt="Studio maternity photography Gaithersburg MD — water splash dramatic"
+        class="absolute inset-0 w-full h-full object-cover"
+        style="object-position: 60% 25%"
+        loading="lazy" />
+      <div class="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent"></div>
+      <div class="absolute bottom-6 left-0 right-0 px-6 text-center">
+        <p class="font-mono text-gold text-xs tracking-[0.25em] uppercase mb-1">Ksenia Pro Studio</p>
+        <p class="font-serif font-light text-white text-xl md:text-2xl leading-tight">Creative Studio Lighting</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     7. PRICING / WHAT'S INCLUDED
+═══════════════════════════════════════════════════════════ -->
+<section id="included" class="bg-cream py-20 md:py-28 px-6 md:px-12">
+  <div class="max-w-5xl mx-auto">
+    <p class="font-mono text-gold text-xs tracking-[0.3em] uppercase mb-4 text-center">The Investment</p>
+    <h2 class="font-serif font-light text-4xl md:text-5xl text-ink text-center mb-4">
+      Everything Included.<br/><em>Nothing Overlooked.</em>
+    </h2>
+    <p class="text-center text-muted font-light text-lg mb-16">
+      Luxury studio maternity photography — starting at <span class="text-ink font-medium">$1,250</span> +tax &nbsp;·&nbsp; packages vary to fit every vision
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-10">
+
+      <!-- Maternity Session -->
+      <div class="border border-border bg-white p-8 flex flex-col">
+        <div class="font-mono text-gold text-xs tracking-widest uppercase mb-2">Maternity Session</div>
+        <div class="font-serif text-4xl font-light text-ink mb-1">From $1,250</div>
+        <div class="text-muted text-sm font-light mb-6">+tax &nbsp;·&nbsp; multiple packages available</div>
+        <ul class="space-y-3 mb-8 flex-1 text-sm font-light">
+          <li class="flex gap-3"><span class="text-gold flex-shrink-0">✦</span> Studio session with full posing direction</li>
+          <li class="flex gap-3"><span class="text-gold flex-shrink-0">✦</span> Access to designer gown wardrobe &amp; props</li>
+          <li class="flex gap-3"><span class="text-gold flex-shrink-0">✦</span> Multiple outfit &amp; gown changes</li>
+          <li class="flex gap-3"><span class="text-gold flex-shrink-0">✦</span> Hair &amp; makeup recommendations</li>
+          <li class="flex gap-3"><span class="text-gold flex-shrink-0">✦</span> Creative consultation call</li>
+          <li class="flex gap-3"><span class="text-gold flex-shrink-0">✦</span> Hand-retouched high-res digitals</li>
+          <li class="flex gap-3"><span class="text-gold flex-shrink-0">✦</span> Private online proofing gallery</li>
+        </ul>
+        <a href="#book" class="block bg-ink text-cream font-mono text-xs tracking-widest px-6 py-4 hover:bg-dark-brown transition-colors uppercase text-center">
+          Book Maternity Session
+        </a>
+      </div>
+
+      <!-- Maternity + Newborn Bundle -->
+      <div class="border-2 border-gold bg-white p-8 flex flex-col relative">
+        <div class="absolute -top-3 left-8 bg-gold text-ink font-mono text-xs tracking-widest px-4 py-1 uppercase">Special Offer</div>
+        <div class="font-mono text-gold text-xs tracking-widest uppercase mb-2">Maternity + Newborn Bundle</div>
+        <div class="font-serif text-4xl font-light text-ink mb-1">Save $200</div>
+        <div class="text-muted text-sm font-light mb-6">on your Newborn session when booked with Maternity</div>
+        <ul class="space-y-3 mb-8 flex-1 text-sm font-light">
+          <li class="flex gap-3"><span class="text-gold flex-shrink-0">✦</span> Everything in the Maternity Session</li>
+          <li class="flex gap-3"><span class="text-gold flex-shrink-0">✦</span> Newborn studio session (0–14 days)</li>
+          <li class="flex gap-3"><span class="text-gold flex-shrink-0">✦</span> Safe, gentle newborn posing</li>
+          <li class="flex gap-3"><span class="text-gold flex-shrink-0">✦</span> Posed &amp; lifestyle newborn work</li>
+          <li class="flex gap-3"><span class="text-gold flex-shrink-0">✦</span> Sibling &amp; family images included</li>
+          <li class="flex gap-3"><span class="text-gold flex-shrink-0">✦</span> Priority scheduling for your newborn slot</li>
+          <li class="flex gap-3"><span class="text-gold flex-shrink-0">✦</span> $200 discount applied automatically</li>
+        </ul>
+        <a href="#book" class="block bg-gold text-ink font-mono text-xs tracking-widest px-6 py-4 hover:bg-gold-light transition-colors uppercase text-center">
+          Inquire About the Bundle
+        </a>
+      </div>
+
+    </div>
+
+    <p class="text-center font-mono text-muted text-xs tracking-wider">
+      Packages vary in session length, number of digitals, and inclusions · Contact us to find the right fit for your vision
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     8. MEET KSENIA
+═══════════════════════════════════════════════════════════ -->
+<section id="about" class="bg-dark-brown py-20 md:py-28 px-6 md:px-12">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+    <div class="aspect-square bg-ink/40 overflow-hidden">
+      <img src="./images/ksenia-portrait.jpg" alt="Ksenia — luxury maternity photographer Washington DC" class="w-full h-full object-cover" loading="lazy" onerror="this.style.display='none'" />
+    </div>
+    <div>
+      <p class="font-mono text-gold text-xs tracking-[0.3em] uppercase mb-6">Meet Your Photographer</p>
+      <h2 class="font-serif font-light text-4xl md:text-5xl text-white mb-4">
+        Meet <em class="text-gold-light">Ksenia</em>
+      </h2>
+      <p class="font-mono text-white/30 text-xs tracking-widest mb-8 uppercase">
+        Photographer · Artist · Mother
+      </p>
+      <p class="text-white/60 font-light leading-relaxed mb-5">
+        With 15 years of portrait and fashion photography experience and over 1,000 sessions delivered, Ksenia built her luxury studio from scratch after immigrating to the United States — driven by the belief that every mother deserves images as extraordinary as the journey she's on.
+      </p>
+      <p class="text-white/60 font-light leading-relaxed mb-5">
+        As a mother herself, she knows how fast these moments pass. "It seems like my daughter was born yesterday, and now I put her on a school bus every morning." That's why she photographs every maternity session with the same urgency and artistry she'd want for her own family.
+      </p>
+      <p class="text-white/60 font-light leading-relaxed mb-10">
+        Her work is fashion-forward, editorial, and deeply personal. Every session is fully directed — you don't need to know how to pose, just how to breathe.
+      </p>
+      <a href="#book" class="font-mono text-xs tracking-widest text-gold border border-gold px-8 py-4 hover:bg-gold hover:text-ink transition-colors uppercase inline-block">
+        Book a Session with Ksenia
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     8B. GOOGLE REVIEWS
+═══════════════════════════════════════════════════════════ -->
+<!-- INSTRUCTIONS: Replace the review text, names, and dates below with real reviews
+     copied from your Google Business profile. Keep the HTML structure the same. -->
+<section class="bg-cream py-20 md:py-28 px-6 md:px-12">
+  <div class="max-w-6xl mx-auto">
+
+    <!-- Rating header -->
+    <div class="text-center mb-16">
+      <p class="font-mono text-gold text-xs tracking-[0.3em] uppercase mb-4">Client Love</p>
+      <h2 class="font-serif font-light text-4xl md:text-5xl text-ink mb-6">
+        What Our Clients <em>Say</em>
+      </h2>
+      <div class="flex items-center justify-center gap-4 flex-wrap">
+        <div class="flex items-center gap-1">
+          <span class="text-gold text-2xl">★★★★★</span>
+        </div>
+        <div class="text-left">
+          <div class="font-serif text-3xl text-ink font-light">5.0</div>
+          <div class="font-mono text-xs text-muted tracking-widest uppercase">160+ Google Reviews</div>
+        </div>
+        <div class="w-px h-10 bg-border hidden sm:block"></div>
+        <div class="text-left">
+          <div class="font-serif text-3xl text-ink font-light">1,000+</div>
+          <div class="font-mono text-xs text-muted tracking-widest uppercase">Sessions Delivered</div>
+        </div>
+        <div class="w-px h-10 bg-border hidden sm:block"></div>
+        <div class="text-left">
+          <div class="font-serif text-3xl text-ink font-light">15 yrs</div>
+          <div class="font-mono text-xs text-muted tracking-widest uppercase">Experience</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review cards -->
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+
+      <!-- Review 1 — Terri Griffith, Google -->
+      <div class="bg-white border border-border p-7 flex flex-col">
+        <div class="flex gap-1 text-gold text-sm mb-4">★★★★★</div>
+        <p class="text-ink/70 font-light leading-relaxed text-sm mb-6 flex-1">
+          "Ksenia did my maternity shoot &amp; I can't rave enough about her professionalism, the comfort she provided for me &amp; my family in her studio, her quick turn around time, &amp; quality of her work. My shoot was unique &amp; I've gotten nothing but positive feedback from friends &amp; family. I would 100% recommend her with no reservation."
+        </p>
+        <div class="border-t border-border pt-4 flex items-center justify-between">
+          <div>
+            <div class="font-medium text-sm text-ink">Terri Griffith</div>
+            <div class="font-mono text-xs text-muted tracking-wide">Google Review · Washington DC area</div>
+          </div>
+          <svg class="w-5 h-5 text-muted/40 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        </div>
+      </div>
+
+      <!-- Review 2 — Kitanya Williams, Google -->
+      <div class="bg-white border border-border p-7 flex flex-col">
+        <div class="flex gap-1 text-gold text-sm mb-4">★★★★★</div>
+        <p class="text-ink/70 font-light leading-relaxed text-sm mb-6 flex-1">
+          "We had such an AMAZING experience during our maternity photoshoot. I was having a horrible day and once I stepped into the studio, Ksenia gave me a hug and made me feel so comfortable from the start. The pictures came out beautiful and we LOVE them. I highly recommend Ksenia!!!! You won't regret your experience."
+        </p>
+        <div class="border-t border-border pt-4 flex items-center justify-between">
+          <div>
+            <div class="font-medium text-sm text-ink">Kitanya Williams</div>
+            <div class="font-mono text-xs text-muted tracking-wide">Google Review · Maryland</div>
+          </div>
+          <svg class="w-5 h-5 text-muted/40 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        </div>
+      </div>
+
+      <!-- Review 3 — Haddad Events, Google -->
+      <div class="bg-white border border-border p-7 flex flex-col">
+        <div class="flex gap-1 text-gold text-sm mb-4">★★★★★</div>
+        <p class="text-ink/70 font-light leading-relaxed text-sm mb-6 flex-1">
+          "We had such an amazing experience with Ksenia Photography! From start to finish, she made us feel so comfortable and truly captured the most beautiful moments. Our maternity shoot was everything I hoped for — she guided us with poses while still letting everything feel natural and effortless. We also did a family shoot, and she was absolutely wonderful with our kids. The photos turned out stunning, and we'll treasure them forever."
+        </p>
+        <div class="border-t border-border pt-4 flex items-center justify-between">
+          <div>
+            <div class="font-medium text-sm text-ink">Haddad Events</div>
+            <div class="font-mono text-xs text-muted tracking-wide">Google Review · DMV area</div>
+          </div>
+          <svg class="w-5 h-5 text-muted/40 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA to Google -->
+    <div class="text-center">
+      <a href="https://www.google.com/search?q=Ksenia+Pro+Photography+reviews" target="_blank"
+        class="font-mono text-xs tracking-widest text-muted border border-border px-8 py-4 hover:border-gold hover:text-gold transition-colors uppercase inline-flex items-center gap-3">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        Read All 160+ Google Reviews
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     9. FAQ
+═══════════════════════════════════════════════════════════ -->
+<section id="faq" class="bg-cream py-20 md:py-28 px-6 md:px-12">
+  <div class="max-w-3xl mx-auto">
+    <p class="font-mono text-gold text-xs tracking-[0.3em] uppercase mb-4 text-center">Questions</p>
+    <h2 class="font-serif font-light text-4xl md:text-5xl text-ink text-center mb-16">
+      Maternity Photography <em>FAQs</em>
+    </h2>
+
+    <div class="space-y-0 border-t border-border" id="faq-list">
+
+      <div class="faq-item border-b border-border">
+        <button class="faq-trigger w-full text-left py-5 flex justify-between items-center gap-4">
+          <span class="font-light text-ink text-lg">When is the best time to schedule my maternity session?</span>
+          <span class="faq-icon text-gold text-xl flex-shrink-0 font-light">+</span>
+        </button>
+        <div class="faq-answer">
+          <p class="text-muted font-light pb-6 leading-relaxed">
+            The ideal window is between 32–36 weeks of pregnancy, when your belly is beautifully round but you're still comfortable moving and posing. We recommend booking at 20–24 weeks to secure your preferred date, especially for weekend sessions which fill quickly.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item border-b border-border">
+        <button class="faq-trigger w-full text-left py-5 flex justify-between items-center gap-4">
+          <span class="font-light text-ink text-lg">Do I need to bring my own clothes or gowns?</span>
+          <span class="faq-icon text-gold text-xl flex-shrink-0 font-light">+</span>
+        </button>
+        <div class="faq-answer">
+          <p class="text-muted font-light pb-6 leading-relaxed">
+            No — our studio has a full wardrobe of luxury designer gowns, flowing fabrics, and styled accessories available for your session at no additional cost. You're welcome to bring your own pieces too. Ksenia will guide you on what works best for the editorial look we're creating together.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item border-b border-border">
+        <button class="faq-trigger w-full text-left py-5 flex justify-between items-center gap-4">
+          <span class="font-light text-ink text-lg">Where is the studio located? Do you serve Northern Virginia and Maryland?</span>
+          <span class="faq-icon text-gold text-xl flex-shrink-0 font-light">+</span>
+        </button>
+        <div class="faq-answer">
+          <p class="text-muted font-light pb-6 leading-relaxed">
+            Our studio is in Gaithersburg, MD — easily accessible off I-270, Exit 9. We serve the entire DC, Maryland, and Virginia area, including Washington DC, Bethesda, Rockville, Silver Spring, McLean, Arlington, Fairfax, Tysons, Potomac, and beyond.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item border-b border-border">
+        <button class="faq-trigger w-full text-left py-5 flex justify-between items-center gap-4">
+          <span class="font-light text-ink text-lg">I've never been in front of a camera. Will I know how to pose?</span>
+          <span class="faq-icon text-gold text-xl flex-shrink-0 font-light">+</span>
+        </button>
+        <div class="faq-answer">
+          <p class="text-muted font-light pb-6 leading-relaxed">
+            You don't have to. Ksenia fully directs every moment of your session — where to put your hands, how to angle your body, where to look, how to breathe. Most clients say they were surprised by how natural and relaxed the session felt. Your only job is to show up.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item border-b border-border">
+        <button class="faq-trigger w-full text-left py-5 flex justify-between items-center gap-4">
+          <span class="font-light text-ink text-lg">How long does a maternity session take?</span>
+          <span class="faq-icon text-gold text-xl flex-shrink-0 font-light">+</span>
+        </button>
+        <div class="faq-answer">
+          <p class="text-muted font-light pb-6 leading-relaxed">
+            Sessions are typically 1 to 1.5 hours. This gives us time to try multiple gowns, a few different setups, and make sure we get a wide variety of stunning images without rushing or exhausting you. We work at your pace.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item border-b border-border">
+        <button class="faq-trigger w-full text-left py-5 flex justify-between items-center gap-4">
+          <span class="font-light text-ink text-lg">When will I receive my photos?</span>
+          <span class="faq-icon text-gold text-xl flex-shrink-0 font-light">+</span>
+        </button>
+        <div class="faq-answer">
+          <p class="text-muted font-light pb-6 leading-relaxed">
+            Your private online gallery is typically ready within 2–3 weeks of your session. You'll receive a selection of fully edited, magazine-grade images to choose from for your final collection.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item border-b border-border">
+        <button class="faq-trigger w-full text-left py-5 flex justify-between items-center gap-4">
+          <span class="font-light text-ink text-lg">Can my partner and older children be included?</span>
+          <span class="faq-icon text-gold text-xl flex-shrink-0 font-light">+</span>
+        </button>
+        <div class="faq-answer">
+          <p class="text-muted font-light pb-6 leading-relaxed">
+            Absolutely. We typically start the session solo for the most editorial, fashion-forward images, then bring in your partner and/or older children for a portion of the session. We'll plan this together during your pre-session consultation.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item border-b border-border">
+        <button class="faq-trigger w-full text-left py-5 flex justify-between items-center gap-4">
+          <span class="font-light text-ink text-lg">What's the difference between the maternity session and the maternity + newborn bundle?</span>
+          <span class="faq-icon text-gold text-xl flex-shrink-0 font-light">+</span>
+        </button>
+        <div class="faq-answer">
+          <p class="text-muted font-light pb-6 leading-relaxed">
+            Booking both sessions together saves you $200 and guarantees your newborn slot is reserved before the baby arrives. Newborn sessions must happen within the first 14 days of birth, so securing that spot in advance gives you peace of mind. It also allows us to create a beautifully cohesive set of images spanning both moments.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     10. BOOKING FORM
+═══════════════════════════════════════════════════════════ -->
+<section id="book" class="bg-ink py-20 md:py-28 px-6 md:px-12">
+  <div class="max-w-2xl mx-auto">
+    <p class="font-mono text-gold text-xs tracking-[0.3em] uppercase mb-4 text-center">Reserve Your Date</p>
+    <h2 class="font-serif font-light text-4xl md:text-5xl text-white text-center mb-4">
+      Ready for Photos You'll<br/><em class="text-gold-light">Treasure Forever?</em>
+    </h2>
+    <p class="text-white/40 text-center font-light mb-12">
+      Fill out the form below and Ksenia will be in touch within 24 hours to confirm your date and answer any questions.
+    </p>
+
+    <form id="booking-form" class="space-y-5" onsubmit="handleSubmit(event)">
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label class="font-mono text-xs tracking-widest text-white/40 uppercase block mb-2">Your Name *</label>
+          <input type="text" name="name" required placeholder="First &amp; Last Name"
+            class="w-full bg-white/5 border border-white/10 text-white placeholder-white/20 px-4 py-3 font-light focus:outline-none focus:border-gold transition-colors" />
+        </div>
+        <div>
+          <label class="font-mono text-xs tracking-widest text-white/40 uppercase block mb-2">Phone Number *</label>
+          <input type="tel" name="phone" required placeholder="(202) 555-0100"
+            class="w-full bg-white/5 border border-white/10 text-white placeholder-white/20 px-4 py-3 font-light focus:outline-none focus:border-gold transition-colors" />
+        </div>
+      </div>
+      <div>
+        <label class="font-mono text-xs tracking-widest text-white/40 uppercase block mb-2">Email Address *</label>
+        <input type="email" name="email" required placeholder="you@example.com"
+          class="w-full bg-white/5 border border-white/10 text-white placeholder-white/20 px-4 py-3 font-light focus:outline-none focus:border-gold transition-colors" />
+      </div>
+      <div>
+        <label class="font-mono text-xs tracking-widest text-white/40 uppercase block mb-2">Session Type *</label>
+        <select name="session" required
+          class="w-full bg-white/5 border border-white/10 text-white px-4 py-3 font-light focus:outline-none focus:border-gold transition-colors appearance-none">
+          <option value="" disabled selected class="bg-ink text-white/40">Select a session</option>
+          <option value="maternity" class="bg-ink">Maternity Session</option>
+          <option value="bundle" class="bg-ink">Maternity + Newborn Bundle — Save $200</option>
+          <option value="unsure" class="bg-ink">Not sure yet — let's talk</option>
+        </select>
+      </div>
+      <div>
+        <label class="font-mono text-xs tracking-widest text-white/40 uppercase block mb-2">How many weeks along are you?</label>
+        <input type="text" name="weeks" placeholder="e.g. 22 weeks"
+          class="w-full bg-white/5 border border-white/10 text-white placeholder-white/20 px-4 py-3 font-light focus:outline-none focus:border-gold transition-colors" />
+      </div>
+      <div>
+        <label class="font-mono text-xs tracking-widest text-white/40 uppercase block mb-2">Anything else you'd like us to know?</label>
+        <textarea name="message" rows="4" placeholder="Due date, preferred dates, questions..."
+          class="w-full bg-white/5 border border-white/10 text-white placeholder-white/20 px-4 py-3 font-light focus:outline-none focus:border-gold transition-colors resize-none"></textarea>
+      </div>
+      <button type="submit"
+        class="w-full bg-gold text-ink font-mono text-xs tracking-widest py-5 hover:bg-gold-light transition-colors uppercase">
+        Send My Booking Request →
+      </button>
+      <p id="form-success" class="text-gold text-center font-light hidden">
+        ✦ Thank you! Ksenia will be in touch within 24 hours.
+      </p>
+      <p id="form-error" class="text-red-400 text-center font-light text-sm hidden">
+        Please fill in all required fields.
+      </p>
+    </form>
+
+    <div class="mt-12 pt-8 border-t border-white/10 text-center">
+      <p class="text-white/30 font-mono text-xs tracking-widest uppercase mb-3">Questions? We respond within 24 hours.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     11. FOOTER
+═══════════════════════════════════════════════════════════ -->
+<footer class="bg-dark-brown py-12 px-6 md:px-12">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-10 mb-10 pb-10 border-b border-white/10">
+      <div>
+        <div class="font-serif text-2xl font-light tracking-widest text-white mb-3">
+          KSENIA <span class="text-gold">PRO</span> PHOTOGRAPHY
+        </div>
+        <p class="text-white/30 font-light text-sm leading-relaxed">
+          Luxury Maternity &amp; Newborn Photography Studio.<br/>
+          Editorial. Fashion-forward. Unforgettable.
+        </p>
+      </div>
+      <div>
+        <p class="font-mono text-gold text-xs tracking-widest uppercase mb-4">Serving</p>
+        <p class="text-white/40 font-light text-sm leading-relaxed">
+          Washington DC · Bethesda · Rockville<br/>
+          Silver Spring · Gaithersburg · Potomac<br/>
+          McLean · Arlington · Fairfax · Tysons<br/>
+          Northern Virginia · Maryland
+        </p>
+      </div>
+      <div>
+        <p class="font-mono text-gold text-xs tracking-widest uppercase mb-4">Studio Location</p>
+        <p class="text-white/40 font-light text-sm leading-relaxed">
+          Gaithersburg, MD<br/>
+          Off I-270, Exit 9<br/>
+          Serving DC · MD · VA
+        </p>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-white/20 font-mono text-xs tracking-wider">
+      <span>© 2026 Ksenia Pro Photography. All rights reserved.</span>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-gold transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-gold transition-colors">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════════════════ -->
+<script>
+  // ── Header scroll ──────────────────────────────────────────
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      header.classList.add('header-scrolled');
+      header.classList.remove('py-4');
+      header.classList.add('py-2');
+    } else {
+      header.classList.remove('header-scrolled');
+      header.classList.remove('py-2');
+      header.classList.add('py-4');
+    }
+  });
+
+  // ── FAQ accordion ─────────────────────────────────────────
+  document.querySelectorAll('.faq-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const answer = btn.nextElementSibling;
+      const icon   = btn.querySelector('.faq-icon');
+      const isOpen = answer.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('open'));
+      // Open clicked if it was closed
+      if (!isOpen) {
+        answer.classList.add('open');
+        icon.classList.add('open');
+      }
+    });
+  });
+
+  // ── Reveal slider (clip-path based) ──────────────────────
+  function initReveal(wrapId) {
+    const wrap   = document.getElementById(wrapId);
+    if (!wrap) return;
+    const top    = document.getElementById(wrapId + '-top');
+    const handle = document.getElementById(wrapId + '-handle');
+    let active = false;
+
+    function move(clientX) {
+      const r = wrap.getBoundingClientRect();
+      let pct = Math.max(1, Math.min(99, ((clientX - r.left) / r.width) * 100));
+      top.style.clipPath       = `inset(0 ${100 - pct}% 0 0)`;
+      handle.style.left        = pct + '%';
+    }
+
+    // Mouse
+    handle.addEventListener('mousedown', e => { active = true; e.preventDefault(); });
+    wrap.addEventListener('mousedown',   e => { active = true; move(e.clientX); });
+    window.addEventListener('mouseup',   () => { active = false; });
+    window.addEventListener('mousemove', e => { if (active) move(e.clientX); });
+
+    // Touch
+    wrap.addEventListener('touchstart',  e => { active = true; move(e.touches[0].clientX); }, { passive: true });
+    window.addEventListener('touchend',  () => { active = false; });
+    window.addEventListener('touchmove', e => { if (active) move(e.touches[0].clientX); }, { passive: true });
+  }
+  initReveal('rv1');
+
+  // ── Form handler ──────────────────────────────────────────
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form    = document.getElementById('booking-form');
+    const success = document.getElementById('form-success');
+    const error   = document.getElementById('form-error');
+    const data    = new FormData(form);
+    if (!data.get('name') || !data.get('email') || !data.get('phone') || !data.get('session')) {
+      error.classList.remove('hidden');
+      return;
+    }
+    error.classList.add('hidden');
+    // TODO: replace with your actual form endpoint (Formspree, Netlify Forms, HoneyBook, etc.)
+    // fetch('/api/contact', { method: 'POST', body: JSON.stringify(Object.fromEntries(data)) })
+    success.classList.remove('hidden');
+    form.querySelectorAll('input, select, textarea').forEach(el => el.value = '');
+    setTimeout(() => success.classList.add('hidden'), 6000);
+  }
+</script>
+
+</body>
+</html>
